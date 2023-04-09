@@ -1,0 +1,275 @@
+.BookDetailsBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0px;
+}
+
+#rtstr {
+    position: relative;
+    bottom: 3px;
+    font-size: 15px;
+}
+
+.BookDetailsDivBox {
+    width: 72%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    top: 20px;
+}
+
+#home1 {
+    color: #878787;
+    cursor: pointer;
+}
+
+.BookDetailsGridBox {
+    width: 72%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 30px;
+}
+
+.BookDetailsGridItemOne {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.BookDetailsGridItemTwo {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#BookDetailsGridItem1 {
+    border: 1px solid #878787;
+    width: 361px;
+    height: 413px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#BookDetailsGridItem1 img {
+    height: 90%;
+    width: 90%;
+    padding: 30px;
+}
+
+#BookDetailsGridItem2 {
+    width: 95%;
+    height: 38px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.BookDetailBt {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90%;
+    width: 40%;
+    border-radius: 2px;
+    border: none;
+    color: #ffffff;
+}
+
+#BookDetailsGridItemBTN1 {
+    background-color: #A03037;
+    cursor: pointer;
+}
+
+#BookDetailsGridItemBTN2 {
+    background-color: #333333;
+}
+
+.BookDetailsGridItemthri {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 95%;
+    border-bottom: 1px solid #878787;
+}
+
+#BookDetailsGridItem3 {
+    height: 170px;
+}
+
+#BookDetailsGridItem4 {
+    height: 145px;
+    display: flex;
+    font-size: 16px;
+    justify-content: center;
+    align-items: flex-start;
+    color: #0A0102;
+}
+
+#BookDetailsGridItem5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 145px;
+    font-size: 16px;
+    color: #0A0102;
+
+}
+
+
+#star {
+    color: rgb(255, 117, 4);
+}
+
+.Bookdetailtextbox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    position: relative;
+    bottom: 20px;
+    right: 18px;
+}
+
+.BookdetailBooknameBox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 37px;
+    width: 60%;
+    font-size: 28px;
+    color: #0A0102;
+}
+
+.BookdetailAuthorNameBox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 30px;
+    font-size: 18px;
+    color: #878787;
+    width: 60%;
+    position: relative;
+    bottom: 10px;
+}
+
+.BookdetailRatingBox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 25px;
+    width: 60%;
+}
+
+#BookdetailRating1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 55px;
+    font-size: 20px;
+    background-color: #388E3C;
+    color: white;
+}
+
+#BookdetailRating2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 10px;
+    height: 18px;
+    width: 13px;
+    font-size: 15px;
+    color: #878787;
+}
+
+.BookdetailPriceBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 39px;
+    width: 35%;
+    position: relative;
+    top: 8px;
+
+}
+
+#Bookdetaildiscountbox {
+    font-size: 30px;
+    width: 111px;
+    height: 100%;
+    color: #0A0102;
+}
+
+#Bookdetailactualprice {
+    width: 55px;
+    height: 20px;
+    font-size: 15px;
+    color: #878787;
+    text-decoration: line-through;
+}
+
+@media(min-width:410px) and (max-width:810px) {
+    .BookDetailsGridItemOne {
+        width: 50%;
+    }
+
+    .BookDetailsGridItemTwo {
+        width: 60%;
+    }
+    .BookDetailsGridBox {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 30px;
+    }
+    .BookdetailBooknameBox {
+        width: 100%;
+       
+    }
+}
+
+@media(max-width:410px) {
+    .BookDetailsGridItemOne {
+        width: 90%;
+    }
+
+    .BookDetailsGridItemTwo {
+        width: 100%;
+        margin-left: 10px;
+    }
+    .BookDetailsGridBox {
+        width: 73%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 30px;
+    }
+    .BookdetailBooknameBox,.BookdetailPriceBox {
+        width: 50%; 
+    }
+}

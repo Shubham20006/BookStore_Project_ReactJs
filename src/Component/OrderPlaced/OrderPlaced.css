@@ -1,0 +1,102 @@
+.OrderPlacedGridBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.OrderPlacedGridItem1 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 30vh;
+    width: 100%;
+}
+
+.OrderPlacedGridItem2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#orderplacedTxt {
+    width: 22%;
+}
+
+.OrderPlacedGridItem3 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 20vh;
+    width: 50%;
+}
+
+td {
+    border: 1px solid #DCDCDC;
+    border-spacing: 0;
+    padding: 10px;
+    font-size: 14px;
+
+}
+table{
+    border-spacing: 0px;
+}
+#th1,#th2{
+    border-right: none;
+    border-bottom: none;
+}
+#th2,#th3{
+    border-left: none;
+    border-bottom: none;
+}
+
+th {
+    background-color: #FAFAFA;
+    height: 30px;
+    border-spacing: 0;
+    border: 1px solid #DCDCDC;
+}
+
+.OrderPlacedGridItem4 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 10vh;
+    width: 50%;
+    font-size: 14px;
+}
+
+#OrderPlacedBtn {
+    background-color: #3371B5;
+    color: #FAFAFA;
+    height: 35px;
+    width: 200px;
+    border: none;
+    border-radius: 2px;
+cursor: pointer;
+
+}
+@media(max-width:460px) {
+    #orderplacedTxt {
+        width: 90%;
+        height: 70px;
+        margin-bottom: 140px;
+    }
+}
+@media(min-width:460px) and (max-width:800px) {
+    #orderplacedTxt {
+        width: 60%;
+        height: 80px;
+        margin-bottom: 200px;
+    }
+    
+}
+@media(min-width:800px) and (max-width:1000px) {
+    #orderplacedTxt {
+        width: 50%;
+        height: 80px;
+        margin-bottom: 100px;
+    }
+    
+}

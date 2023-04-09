@@ -1,0 +1,25 @@
+.Increment_Decrement{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 110px;
+    height: 35px;
+}
+#Minus,#Count,#Plus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 60%;
+    border: 1px solid #9d9d9d;
+}
+#Count{
+    width: 30%;
+    font-size: 12px;
+    height: 20px;
+}
+#Minus,#Plus{
+    font-size: 20px;
+    border-radius: 50%;
+
+}

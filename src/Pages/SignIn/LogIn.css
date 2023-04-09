@@ -1,0 +1,170 @@
+.viewport {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #c7c7c7;
+}
+.MainBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 391px;
+    background-color: #F5F5F5;
+    border-radius: 21px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  
+}
+
+.MainBox img {
+    height: 245px;
+    width: 245px;
+    border-radius: 50%;
+}
+#shopingtxt {
+    width: 231px;
+    height: 24px;
+    font-size: 18px;
+    font-weight: bolder;
+    color: #0A0102;
+
+}
+
+
+.Paper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 425px;
+    width: 389px;
+    margin-bottom: 30px;
+}
+.innerpaper{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 252px;
+    height: 100%;
+}
+.contenthead{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+    height: 15%;
+    width: 100%;
+    cursor: pointer;  
+}
+.eachbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 45%;
+    margin-top: 20px; 
+}
+#inputpass,#inputemail{
+    width: 252px;
+    height: 35px;
+    margin: 15px;
+}
+#FPass{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 100%;
+    height: 15%;
+    cursor: pointer;
+}
+.innerpaper2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+}
+#BT1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 37px;
+    font-size: 15px;
+    background-color: #A03037;
+    border-radius: 3px;
+    cursor: pointer;
+}
+#Bt1{
+    background-color: #A03037;
+    border-style: none;
+    color:#F5F5F5;
+}
+.BT2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 37px;
+    font-size: 15px;
+    border-radius: 3px;
+}
+.Btn{
+    height: 37px;
+    width: 119px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+#Bt2{
+    width: 126px;
+    background-color: #4266B2;
+    border-style: none;
+    color:#F5F5F5;
+}
+#Bt3{
+    border-style: none;
+}
+.loghead{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#log1{
+color: #0A0102;
+}
+#dash1{ 
+    height: 4px;
+    width: 20px;
+    background-color: #A03037;
+    border-radius: 3px;
+}
+#sign1{
+color: #878787;
+}
+
+@media  (min-width: 771px) {
+    .viewport {
+        height: 100vh;
+    }
+    .Paper{
+       position: relative;
+       right: 30px;
+       top: 15px;
+    }
+    .MainBox img,#shopingtxt {
+       position: relative;
+       right: 15px;
+    }
+  }

@@ -1,0 +1,208 @@
+.MyCartGridOuterBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+
+
+}
+
+.MyCartBox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 72%;
+    height: 40px;
+}
+
+#mycart {
+    color: black;
+
+}
+
+#MyCartSelect {
+    height: 30px;
+}
+
+
+
+.CartBox {
+    border: 1px solid #DCDCDC;
+    width: 72%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin: 20px 0px;
+}
+
+.CartdataBox {
+    width: 72%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.cartbox1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    height: 30px;
+    padding: 15px;
+    font-size: 18px;
+    color: black;
+}
+
+#cartbox2 {
+    color: black;
+    width: 100%;
+}
+
+.MYcartbtn,
+.CheckoutButton {
+    width: 95%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.MYcartbtn button,
+.CheckoutButton button {
+    height: 35px;
+    width: 150px;
+    background-color: #3371B5;
+    border-style: none;
+    color: white;
+    font-size: 14px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+
+#carthome {
+    cursor: pointer;
+}
+
+.AddressdataBox {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.AddressdataBox1 {
+    width: 72%;
+}
+
+.addressDetailBoxx {
+    width: 75.5%;
+    border: 1px solid #DCDCDC;
+}
+
+#adrDetail {
+    width: 75%;
+}
+
+.AddressBox,
+.SummeryBox {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    margin: 20px 0px;
+}
+
+#addressbox,
+#summerybox {
+    width: 72%;
+}
+
+#addressbox1,
+#summerybox1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 18px;
+    width: 69%;
+    height: 100%;
+    color: #333232;
+    padding: 0px 30px;
+    border: 1px solid #DCDCDC;
+}
+
+.SummeryDetailBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.summerydetailbox1 {
+    width: 72%;
+}
+
+.summerydetailbox2 {
+    width: 75.5%;
+    margin: 20px 0px;
+    border: 1px solid #DCDCDC;
+}
+
+#summery {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 18px;
+    color: #333232;
+    padding: 30px;
+}
+
+#orderdetailbox1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+@media(max-width:600px) {
+
+    .AddressdataBox1,
+    .addressDetailBoxx {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #adrDetail {
+        width: 100%;
+    }
+
+    .CartdataBox {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .MyCartGridOuterBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0px;
+        width: 100%;
+
+    }
+    .summerydetailbox1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 20px 0px;
+    }
+    .summerydetailbox2{
+        width: 85%;
+    }
+
+}

@@ -1,0 +1,87 @@
+.AddressDetailGridBoxOuter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    width: 100%;
+}
+
+.customer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+#customer1 {
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: #333232;
+}
+
+.NamePassBox,.AddressDetailBox,.CityStateBox,.RadioAddress {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #0A0102;
+    
+}
+.NamePassBox1,.NamePassBox2,.CityStateBox1,.CityStateBox2{
+    margin: 5px 0px;
+    
+}
+.AddressDetailBox,.RadioAddress{
+margin: 20px 0px;
+}
+.AddressDetail1{
+    width: 100%;
+}
+.radioaddress1{ 
+    align-items: flex-start;
+    width: 100%;
+}
+#demo-row-radio-buttons-group-label{
+    color: #0A0102;
+}
+.RadioGroup{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 10px 0px;
+}
+
+.AddressButton {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#AdrsBtn button {
+    height: 35px;
+    width: 150px;
+    background-color: #3371B5;
+    border-style: none;
+    color: white;
+    font-size: 14px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+@media(max-width:1260px){
+    .NamePassBox1,.NamePassBox2,.CityStateBox1,.CityStateBox2{
+        margin: 5px 0px;
+        width: 100%;
+        
+    }
+    .NamePassBox,.AddressDetailBox,.CityStateBox,.RadioAddress {
+        width: 100%;
+    }
+}
+@media(min-width:600px){
+    #AdrsBtn button {
+       position: relative;
+       left: 110px;
+    }
+}

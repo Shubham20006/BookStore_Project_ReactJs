@@ -1,0 +1,135 @@
+.viewport1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #c7c7c7;
+}
+.MainBox1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 391px;
+    background-color: #F5F5F5;
+    border-radius: 21px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  
+}
+
+.MainBox1 img {
+    height: 245px;
+    width: 245px;
+    border-radius: 50%;
+}
+#shopingtxt1 {
+    width: 231px;
+    height: 24px;
+    font-size: 18px;
+    font-weight: bolder;
+    color: #0A0102;
+
+}
+
+
+.Paper2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 425px;
+    width: 389px;
+    margin-bottom: 30px;
+}
+
+.PaperSignup {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 252px;
+    height: 100%;
+
+}
+
+.contenthead1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+    height: 15%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.box1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 85%;
+    padding: 15px 0px;
+}
+
+.Each1,
+#inputPass {
+    width: 100%;
+    height: 35px;
+}
+
+#SignupBt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 37px;
+    font-size: 15px;
+    background-color: #A03037;
+    border-radius: 3px;
+}
+
+#Signupbutton {
+    background-color: #A03037;
+    border-style: none;
+    color: #F5F5F5;
+}
+.signhead{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#dash2{ 
+    height: 4px;
+    width: 20px;
+    background-color: #A03037;
+    border-radius: 3px;
+}
+#log2 {
+    color: #878787;
+}
+
+#sign2 {
+    color: #0A0102;
+}
+@media  (min-width: 770px) {
+    .viewport1 {
+        height: 100vh;
+    }
+    .Paper2{
+       position: relative;
+       right: 30px;
+       top: 15px;
+    }
+    .MainBox1 img,#shopingtxt1 {
+       position: relative;
+       right: 15px;
+    }
+  }

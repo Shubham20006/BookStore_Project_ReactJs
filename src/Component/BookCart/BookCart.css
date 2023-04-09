@@ -1,0 +1,104 @@
+.paper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 235px;
+    height: 275px;
+}
+
+.detailtextbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height:63px;
+    
+}
+.ImageBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 172px;
+    background-color: #f5f5f5;
+    
+    
+}
+.ImageBox img{
+    height: 137px;
+    width: 110px;
+    box-shadow: 2px 2px 5px 2px #878787;
+}
+.BooknameBox{
+    display: flex;
+    justify-content: flex-start;
+    height: 20px;
+    width: 100%;
+    font-size: 14px;
+    color: #0A0102;
+    position: relative;
+    bottom: 5px;
+}
+.AuthorNameBox{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 14px;
+    font-size: 2px;
+    color: #878787;
+    width: 100%;
+    position: relative;
+    bottom: 4px;
+   
+}
+.RatingBox{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 16px;
+    width: 100%;
+    position: relative;
+    top: 4px;
+   
+}
+#Rating1{
+height: 100%;
+width: 33px;
+font-size: 10px;
+background-color: #388E3C;
+color: white;
+}
+#Rating2{
+    position: relative;
+    left: 2px;
+    height: 18px;
+    width: 13px;
+    font-size: 10px;
+    color: #878787;
+}
+.PriceBox{
+    display: flex;
+    justify-content: flex-start;
+    height: 16px;
+    width: 100%;
+    position: relative;
+    top: 8px;
+}
+#discountbox{
+    width: 48px;
+    height: 100%;
+    font-size: 12px;
+    color: #0A0102;
+}
+#actualprice{
+    width: 36px;
+    height: 13px;
+    font-size: 10px;
+    color: #878787;
+    text-decoration: line-through;
+}
+#rtstr1{
+    font-size: 8px;
+}

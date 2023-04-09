@@ -1,0 +1,19 @@
+.footerbox {
+    background-color: #2E1D1E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    position: relative;
+    top: 37px;
+
+}
+
+#FooterItem {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 72%;
+    color: white;
+    font-size: 12px;
+}

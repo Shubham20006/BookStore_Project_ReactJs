@@ -1,0 +1,68 @@
+.MyCartDataBox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+.MyCartImg img {
+    width: 65px;
+    height: 85px;
+}
+
+.MyCarttextbox {
+    width: 60%;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#MyCartBookname {
+    font-size: 14px;
+    width: 150px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#MyCartAuthorName {
+    width: 150px;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 10px;
+    color: #9d9d9d;
+}
+
+.MyCartPriceBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 6px;
+}
+
+#MyCartdiscountbox {
+    font-size: 15px;
+}
+
+#MyCartactualprice {
+    font-size: 9px;
+    color: #9d9d9d;
+    text-decoration: line-through;
+    width: 100%;
+    position: relative;
+    left: 8px;
+}
+
+.bookcartquantity_Mycartdata {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 10px;
+    width: 180px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #878787;
+}
