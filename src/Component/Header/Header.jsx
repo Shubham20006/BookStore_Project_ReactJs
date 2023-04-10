@@ -17,12 +17,12 @@ import cartpng from "D:/React/BookStore/bookstore/src/Component/Header/supermark
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
-
+import { Link } from 'react-router-dom';
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
-    display:"flex",
-    alignItems:"center",
+    display: "flex",
+    alignItems: "center",
     borderRadius: theme.shape.borderRadius,
     marginRight: theme.spacing(2),
     marginLeft: 0,
@@ -56,7 +56,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
 }));
 
-export default function Header({setToggleCart}) {
+export default function Header() {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -101,8 +101,8 @@ export default function Header({setToggleCart}) {
             <div className='prfmenu'>
                 <MenuItem onClick={handleMenuClose}>
                     <div className='prfmn1' >
-                    <div id='m1'>Welcome</div>
-                    <div id='m2'>To access account and manage tokens</div>
+                        <div id='m1'>Welcome</div>
+                        <div id='m2'>To access account and manage tokens</div>
                     </div>
                 </MenuItem>
                 <MenuItem className='prfmenu1'>
@@ -137,7 +137,7 @@ export default function Header({setToggleCart}) {
         >
             <MenuItem>
                 <IconButton size="large" >
-                <CardGiftcardIcon />
+                    <CardGiftcardIcon />
                 </IconButton>
                 <p>My orders</p>
             </MenuItem>
@@ -145,7 +145,7 @@ export default function Header({setToggleCart}) {
                 <IconButton
                     size="large"
                 >
-                   <FavoriteBorderOutlinedIcon />
+                    <FavoriteBorderOutlinedIcon />
                 </IconButton>
                 <p>Wishlist</p>
             </MenuItem>
@@ -197,14 +197,18 @@ export default function Header({setToggleCart}) {
                                 <PersonOutlineOutlinedIcon id="prsonpng" />
                                 <div>Profile</div>
                             </IconButton>
-                            <IconButton id='prof2' size="small" edge="end"
-                                aria-controls={menuId}
-                                aria-haspopup="true" onClick={()=>setToggleCart(true)} >
-                                <img src={cartpng} alt="" />
-                                <div>Cart</div>
-                            </IconButton>
+                            <Link to="/mycart">
+                                <IconButton id='prof2' size="small" edge="end"
+                                    aria-controls={menuId}
+                                    aria-haspopup="true"
 
+                                >
 
+                                    <img src={cartpng} alt="" />
+                                    <div>Cart</div>
+                                </IconButton>
+
+                            </Link>
                         </Box>
                         <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
                             <IconButton

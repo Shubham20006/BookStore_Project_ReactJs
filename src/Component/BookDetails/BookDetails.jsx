@@ -21,13 +21,6 @@ function BookDetails({ setToggle, bookInfo }) {
 
     const getCartItemsAndUpdte = async () => {
 
-        // let arr = await getCartItems()
-        // let book = arr.filter((obj) => obj.product_id._id === bookInfo._id)
-        // console.log(arr)
-        // console.log(bookInfo._id)
-        // console.log(arr.data.result.product_id._id)
-
-
         let response = await getCartItems()
         console.log(bookInfo._id)
 

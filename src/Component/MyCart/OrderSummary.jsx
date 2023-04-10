@@ -5,6 +5,7 @@ import { styled } from '@mui/material/styles';
 import "./OrderSummary.css"
 
 
+
 const Item = styled(Box)(({ theme }) => ({
     padding: theme.spacing(1),
 }));
@@ -12,7 +13,7 @@ const Item = styled(Box)(({ theme }) => ({
 function OrderSummary({ cartInfo }) {
     return (
         <Grid container className='OrderSummaryBox'>
-            <Item className='OrderSummaryImg'xs={12} sm={6} md={4} lg={3}>
+            <Item className='OrderSummaryImg' xs={12} sm={6} md={4} lg={3}>
                 <img src="https://archive.org/download/2019-Don-t-Make-Me-Think-Revisited/0321965515.jpg" alt="" />
             </Item>
             <Item className='OrderSummarytextbox' xs={12} sm={6} md={4} lg={3}>

@@ -9,6 +9,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import "./AddressDetail.css"
+import { userAddress } from '../../Services/DataServices';
 
 const Item = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -16,35 +17,23 @@ const Item = styled(Box)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-const TextRegex = /^[A-Z]{1}[A-Za-z]{2,}$/;
-const mobRegex = /^[0-9]{10}$/;
 
-
-
-
+const citystate_Regex = /(^[A-Za-z]{2,})/;
 
 function AddressDetail({ setSummaryToggle, summaryToggle }) {
 
-  const [AdrsObj, setAdrsObj] = useState({ fullName: "", phone: "", address: "", city: "", state: "" });
+  const [AdrsObj, setAdrsObj] = useState({ addressType: "", fullAddress: "", city: "", state: "" });
   const [errObj, setErrObj] = useState({
-    NameError: false,
-    NameHelper: "",
-    phoneError: false,
-    phoneHelper: "",
     cityError: false,
     cityHelper: "",
     stateError: false,
     stateHelper: "",
 
   });
-  const takeFullName = (event) => {
-    setAdrsObj((prev) => ({ ...prev, fullName: event.target.value }));
-  };
-  const takePhone = (event) => {
-    setAdrsObj((prev) => ({ ...prev, phone: event.target.value }));
-  };
+
+
   const takeAddress = (event) => {
-    setAdrsObj((prev) => ({ ...prev, address: event.target.value }));
+    setAdrsObj((prev) => ({ ...prev, fullAddress: event.target.value }));
 
   };
   const takeCity = (event) => {
@@ -55,40 +44,15 @@ function AddressDetail({ setSummaryToggle, summaryToggle }) {
     setAdrsObj((prev) => ({ ...prev, state: event.target.value }));
 
   };
+  const takeAddressType = (event) => {
+    setAdrsObj((prev) => ({ ...prev, addressType: event.target.value }));
+
+  };
 
 
   const Submit = async () => {
-    let nameTest = TextRegex.test(AdrsObj.fullName);
-    let phoneTest = mobRegex.test(AdrsObj.phone);
-    let cityTest = TextRegex.test(AdrsObj.email);
-    let stateTest = TextRegex.test(AdrsObj.password);
-
-    if (nameTest === false) {
-      setErrObj((prevState) => ({
-        ...prevState,
-        NameError: true,
-        NameHelper: "Enter correct Full Name",
-      }));
-    } else {
-      setErrObj((prevState) => ({
-        ...prevState,
-        NameError: false,
-        NameHelper: "",
-      }));
-    }
-    if (phoneTest === false) {
-      setErrObj((prevState) => ({
-        ...prevState,
-        phoneError: true,
-        phoneHelper: "Enter correct Mobile number",
-      }));
-    } else {
-      setErrObj((prevState) => ({
-        ...prevState,
-        phoneError: false,
-        phoneHelper: "",
-      }));
-    }
+    let cityTest = citystate_Regex.test(AdrsObj.city);
+    let stateTest = citystate_Regex.test(AdrsObj.state);
 
     if (cityTest === false) {
       setErrObj((prevState) => ({
@@ -117,7 +81,12 @@ function AddressDetail({ setSummaryToggle, summaryToggle }) {
         stateHelper: "",
       }));
     }
+    if (cityTest === true && stateTest === true) {
+      let response = await userAddress(AdrsObj);
+      console.log(response);
+      setSummaryToggle(true);
 
+    }
 
   };
 
@@ -139,10 +108,6 @@ function AddressDetail({ setSummaryToggle, summaryToggle }) {
             variant="outlined"
             required
             size='small'
-            onChange={takeFullName}
-            error={errObj.NameError}
-            helperText={errObj.NameHelper}
-
           />
         </Item>
         <Item className='NamePassBox2' xs={12} sm={6} md={4} lg={3}>
@@ -155,9 +120,6 @@ function AddressDetail({ setSummaryToggle, summaryToggle }) {
             variant="outlined"
             required
             size='small'
-            onChange={takePhone}
-            error={errObj.phoneError}
-            helperText={errObj.phoneHelper}
           />
         </Item>
 
@@ -223,6 +185,7 @@ function AddressDetail({ setSummaryToggle, summaryToggle }) {
             className='RadioGroup'
             aria-labelledby="demo-row-radio-buttons-group-label"
             name="row-radio-buttons-group"
+            onChange={takeAddressType}
           >
             <FormControlLabel value="Home" control={<Radio />} label="Home" />
             <FormControlLabel value="Work" control={<Radio />} label="Work" />
@@ -233,7 +196,7 @@ function AddressDetail({ setSummaryToggle, summaryToggle }) {
       <Item className='AddressButton' xs={12} sm={6} md={4} lg={3}>
         {
           summaryToggle ? " " :
-            <div id='AdrsBtn'><button onClick={() => { setSummaryToggle(true); Submit() }}>CONTINUE</button></div>
+            <div id='AdrsBtn'><button onClick={() => Submit()}>CONTINUE</button></div>
 
         }
       </Item>

@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { Grid, Box } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import { getCartItems } from '../../Services/DataServices';
+import { OrderAPI, getCartItems } from '../../Services/DataServices';
 import "./MyCart.css"
 import MyCartData from './MyCartData';
 import AddressDetail from './AddressDetail';
 import OrderSummary from './OrderSummary';
-
+import Header from '../Header/Header';
+import { Link } from 'react-router-dom';
 
 
 
@@ -17,8 +18,7 @@ const Item = styled(Box)(({ theme }) => ({
 }));
 
 
-function MyCart({ setToggleCart, setOrderSuccessfullToggle }) {
-
+function MyCart() {
 
     const [cartData, setCartData] = useState([])
     const [addressToggle, setAddressToggle] = useState(false)
@@ -30,14 +30,32 @@ function MyCart({ setToggleCart, setOrderSuccessfullToggle }) {
     }
     useEffect(() => {
         getMyCartItem()
-        console.log(cartData)
+
     }, [])
+
+    const OrderSendData = async () => {
+        let arrayForHittingServer = cartData.map((cartObj) => ({
+            "product_id": cartObj.product_id._id,
+            "product_name": cartObj.product_id.bookName,
+            "product_quantity": cartObj.quantityToBuy,
+            "product_price": cartObj.product_id.discountPrice
+        }))
+        let finalObj = { orders: arrayForHittingServer }
+        let response = await OrderAPI(finalObj)
+        console.log(response);
+
+    }
 
     return (
         <Grid container className='MyCartGridOuterBox'>
-
+            <Header />
             <Item className='MyCartBox' xs={12} sm={6} md={4} lg={3}>
-                <div ><span id='carthome' onClick={() => setToggleCart(false)}>Home/</span><span id='mycart'>MyCart</span></div>
+                <div >
+                    <Link to="/dashboard">
+                        <span id='carthome' >Home/</span>
+                    </Link>
+
+                    <span id='mycart'>MyCart</span></div>
             </Item>
             <Item className='CartdataBox' xs={12} sm={6} md={4} lg={3}>
                 <div className='CartBox'>
@@ -79,7 +97,7 @@ function MyCart({ setToggleCart, setOrderSuccessfullToggle }) {
                                     {cartData.map((cartInfo) => (<OrderSummary cartInfo={cartInfo.product_id} />))}
                                 </div>
                                 <div className='CheckoutButton'>
-                                    <div id='CheckoutBtn'><button onClick={() => setOrderSuccessfullToggle(true)}>CHECKOUT</button></div>
+                                    <div id='CheckoutBtn'><button onClick={() => OrderSendData()}>CHECKOUT</button></div>
                                 </div>
                             </div>
                         </div>

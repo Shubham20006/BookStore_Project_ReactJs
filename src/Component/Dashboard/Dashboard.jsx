@@ -20,10 +20,8 @@ const Item = styled(Box)(({ theme }) => ({
 function Dashboard() {
 
     const [book, setbook] = useState([])
-    const [toggle, setToggle] = React.useState(true)
-    const [bookInfo, setBookInfo] = React.useState()
-    const [togglecart, setToggleCart] = useState(false)
-    const [orderSuccessfullToggle, setOrderSuccessfullToggle] = useState(false)
+    const [toggle, setToggle] = useState(true)
+    const [bookInfo, setBookInfo] = useState()
 
     const loaddata = async () => {
         let response = await getBooks()
@@ -43,33 +41,25 @@ function Dashboard() {
     return (
         <Grid className='bxx' >
             <Item className='DashHeader' xs={12} sm={6} md={4} lg={3}>
-                <Header setToggleCart={setToggleCart} />
+                <Header />
             </Item>
-            <Item xs={12} sm={6} md={4} lg={3}>
+            <Item>
                 {
-                    orderSuccessfullToggle ?
-                        <OrderPlaced setToggle={setToggle} setToggleCart={setToggleCart} setOrderSuccessfullToggle={setOrderSuccessfullToggle} /> :
-                        <Item > {
-                            togglecart ?
-                                <MyCart setOrderSuccessfullToggle={setOrderSuccessfullToggle} setToggleCart={setToggleCart} />
-                                : <Item>
-                                    {toggle ?
-                                        <div className='bxx2'>
-                                            <div className='gridbox'>
-                                                <Grid className='grid' container spacing={2} >
+                    toggle ?
+                        <div className='bxx2'>
+                            <div className='gridbox'>
+                                <Grid className='grid' container spacing={2} >
 
-                                                    {
-                                                        book.map((bookobj) => (<BookCart setToggle={setToggle} bookData={bookData} bookobj={bookobj} />))
-                                                    }
+                                    {
+                                        book.map((bookobj) => (<BookCart setToggle={setToggle} bookData={bookData} bookobj={bookobj} />))
+                                    }
 
-                                                </Grid>
-                                            </div>
-                                        </div> : <BookDetails setToggle={setToggle} bookInfo={bookInfo} />}
-                                </Item>
-                        }</Item>
+                                </Grid>
+                            </div>
+                        </div> :
+                        <BookDetails setToggle={setToggle} bookInfo={bookInfo} />
                 }
             </Item>
-
             <Item className="Dashboard_Footer" xs={12} sm={6} md={4} lg={3}>
                 <Footer />
             </Item>
