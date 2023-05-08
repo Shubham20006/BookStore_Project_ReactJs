@@ -23,6 +23,7 @@ function MyCart() {
     const [cartData, setCartData] = useState([])
     const [addressToggle, setAddressToggle] = useState(false)
     const [summaryToggle, setSummaryToggle] = useState(false)
+    const [orderPlacedRouter, setorderPlacedRouter] = useState("")
     const getMyCartItem = async () => {
         let response = await getCartItems()
         let cartItem = response.data.result
@@ -43,6 +44,7 @@ function MyCart() {
         let finalObj = { orders: arrayForHittingServer }
         let response = await OrderAPI(finalObj)
         console.log(response);
+        setorderPlacedRouter("/orderplaced")
 
     }
 
@@ -96,9 +98,11 @@ function MyCart() {
                                 <div id='orderdetailbox1'>
                                     {cartData.map((cartInfo) => (<OrderSummary cartInfo={cartInfo.product_id} />))}
                                 </div>
-                                <div className='CheckoutButton'>
-                                    <div id='CheckoutBtn'><button onClick={() => OrderSendData()}>CHECKOUT</button></div>
-                                </div>
+                                <Link to={orderPlacedRouter}>
+                                    <div className='CheckoutButton'>
+                                        <div id='CheckoutBtn'><button onClick={() => OrderSendData()}>CHECKOUT</button></div>
+                                    </div>
+                                </Link>
                             </div>
                         </div>
                         :

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./LogIn.css"
 import Paper from '@mui/material/Paper';
 import FormControl from '@mui/material/FormControl';
@@ -11,6 +11,8 @@ import { login } from '../../Services/UserService';
 import OnlineBook from "D:/React/BookStore/bookstore/src/Pages/OnlineBook.png"
 import { Grid } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import { Link, Navigate } from 'react-router-dom';
+import { getCartItems } from '../../Services/DataServices';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -23,11 +25,11 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const emailRegex = /^[a-z]{3,}(.[0-9a-z]*)?@([a-z]){2,}.[a-z]+(.in)*$/;
 const passwordRegex = /^.*(?=.{8,})(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+=]).*$/;
-function LogIn({checkLogin}) {
+function LogIn({ checkLogin }) {
 
-   const goOnSignup=()=>{
-    checkLogin()
-   }
+    const goOnSignup = () => {
+        checkLogin()
+    }
 
     const [loginObj, setLoginObj] = React.useState({ email: "", password: "" });
     const [errorObj, setErrorObj] = React.useState({
@@ -79,9 +81,9 @@ function LogIn({checkLogin}) {
             let response = await login(loginObj);
             console.log(response);
             localStorage.setItem("token", response.data.result.accessToken);
+          
         }
     }
-
 
 
     const [showPassword, setShowPassword] = React.useState(false);
@@ -146,7 +148,9 @@ function LogIn({checkLogin}) {
                         <div id='FPass'>Forgot password?</div>
                     </div>
                     <div className='innerpaper2'>
-                        <div id='BT1'><button onClick={submit} id='Bt1'>LOGIN</button></div>
+
+                        <div id='BT1'><Link to="/dashboard"><button onClick={submit} id='Bt1'>LOGIN</button> </Link></div>
+
                         <div>--------OR--------</div>
                         <div className='BT2'>
                             <button className='Btn' id='Bt2'>Facebook</button>

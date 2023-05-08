@@ -188,7 +188,7 @@ function AddressDetail({ setSummaryToggle, summaryToggle }) {
             onChange={takeAddressType}
           >
             <FormControlLabel value="Home" control={<Radio />} label="Home" />
-            <FormControlLabel value="Work" control={<Radio />} label="Work" />
+            <FormControlLabel value="Office" control={<Radio />} label="Office" />
             <FormControlLabel value="Other" control={<Radio />} label="Other" />
           </RadioGroup>
         </FormControl>

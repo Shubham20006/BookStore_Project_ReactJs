@@ -12,7 +12,9 @@
     height: 30vh;
     width: 100%;
 }
-
+.headerOrderPlaced{
+    width: 100%;
+}
 .OrderPlacedGridItem2 {
     display: flex;
     justify-content: center;

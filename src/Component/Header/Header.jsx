@@ -56,7 +56,12 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
 }));
 
-export default function Header() {
+
+const deleteToken=()=>{
+    localStorage.removeItem("token")
+}
+
+export default function Header({setSearchBook}) {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -106,7 +111,9 @@ export default function Header() {
                     </div>
                 </MenuItem>
                 <MenuItem className='prfmenu1'>
-                    <div id='m3' >LOGIN/SIGNUP</div>
+                   <Link to="/">
+                   <div id='m3' onClick={deleteToken} >LOGOUT</div>
+                   </Link>
                 </MenuItem>
                 <MenuItem className='prfmn2'>
                     <div id='m4'><CardGiftcardIcon /> My Orders</div>
@@ -186,6 +193,7 @@ export default function Header() {
                             </SearchIconWrapper>
                             <StyledInputBase
                                 placeholder="Search…"
+                                onChange={(event)=>setSearchBook(event.target.value)} 
                                 inputProps={{ 'aria-label': 'search' }}
                             />
                         </Search>

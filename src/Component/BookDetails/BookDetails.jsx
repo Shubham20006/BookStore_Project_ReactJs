@@ -47,13 +47,13 @@ function BookDetails({ setToggle, bookInfo }) {
     }, [])
 
     return (
-        <div container className='BookDetailsBox'  >
-            <Grid item className='BookDetailsDivBox' xs={12} sm={6} md={4} lg={3} >
-                <div  > <span id='home1' onClick={() => setToggle(true)}>Home/ </span><span> Book</span></div>
+        <Grid container className='BookDetailsBox'  >
+            <Grid item className='BookDetailsDivBox'  >
+                <div id='home1' onClick={() => setToggle(true)}>Home/ </div><div> Book</div>
             </Grid>
-            <Grid container className='BookDetailsGridBox' xs={12} sm={12} md={12} lg={9} >
+            <Grid item container  className='BookDetailsGridBox' xs={12} lg={8.5}  >
 
-                <Item className='BookDetailsGridItemOne' >
+                <Item className='BookDetailsGridItemOne' xs={12} sm={6} md={4} lg={3} >
                     <div id='BookDetailsGridItem1'>
                         <img src="https://archive.org/download/2019-Don-t-Make-Me-Think-Revisited/0321965515.jpg" alt="" />
                     </div>
@@ -64,7 +64,7 @@ function BookDetails({ setToggle, bookInfo }) {
                         <button className='BookDetailBt' id='BookDetailsGridItemBTN2'><FavoriteBorderOutlinedIcon /> WISHLIST</button>
                     </div>
                 </Item>
-                <Item className='BookDetailsGridItemTwo' >
+                <Item className='BookDetailsGridItemTwo' xs={12} sm={6} md={4} lg={3} >
                     <div className='BookDetailsGridItemthri' id='BookDetailsGridItem3'>
                         <CardContent className='Bookdetailtextbox'>
                             <Typography className='BookdetailBooknameBox' gutterBottom>
@@ -85,14 +85,16 @@ function BookDetails({ setToggle, bookInfo }) {
                     </div >
                     <div className='BookDetailsGridItemthri' id='BookDetailsGridItem4'>
                         <li>Book Details</li>
+                        <p className='DetailContent'>A book is a medium for recording information in the form of writing or images, typically composed of many pages (made of papyrus, parchment, vellum, or paper) bound together and protected by a cover. </p>
                     </div>
                     <div className='BookDetailsGridItemthri' id='BookDetailsGridItem5'>
                         <div >OVERALL RATING</div>
                         <div ><StarOutlinedIcon id="star" /><StarOutlinedIcon id="star" /><StarOutlinedIcon id="star" /><StarBorderPurple500OutlinedIcon /><StarBorderPurple500OutlinedIcon /></div>
+                        <div className='DetailContent'>According to the Goodreads system, three stars means “I liked it” and that's exactly how I feel. In every book that I have rated three stars, it still meant that overall I enjoyed reading the book. There are many, many three star books that I would (and do) whole heartedly recommend to others!</div>
                     </div>
                 </Item>
             </Grid>
-        </div>
+        </Grid>
     )
 }
 

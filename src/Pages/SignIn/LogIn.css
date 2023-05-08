@@ -168,3 +168,19 @@ color: #878787;
        right: 15px;
     }
   }
+  @media  (max-width: 771px) {
+    .viewport {
+        height: 100vh;
+    }
+    .Paper{
+       position: relative;
+       right: 0px;
+       top: 0px;
+      margin: 15px;
+      
+    }
+    .MainBox,.MainBox img,#shopingtxt {
+        display: none;
+      
+    }
+  }

@@ -133,3 +133,17 @@
        right: 15px;
     }
   }
+  @media  (max-width: 770px) {
+    .viewport1 {
+        height: 100vh;
+    }
+    .Paper2{
+       position: relative;
+       right: 0px;
+       top: 0px;
+       margin: 15px;
+    }
+    .MainBox1{
+        display: none;
+    }
+  }

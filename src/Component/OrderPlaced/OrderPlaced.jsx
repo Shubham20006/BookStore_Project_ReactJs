@@ -2,7 +2,11 @@ import React from 'react'
 import orderplacepic from "D:/React/BookStore/bookstore/src/Component/OrderPlaced/orderplaced.png"
 import { Box, Grid } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
+import { Link } from 'react-router-dom';
 import "./OrderPlaced.css"
+
 
 
 
@@ -10,9 +14,12 @@ const Item = styled(Box)(({ theme }) => ({
     padding: theme.spacing(1),
 }));
 
-function OrderPlaced({setToggleCart,setOrderSuccessfullToggle}) {
+function OrderPlaced() {
     return (
         <Grid container className='OrderPlacedGridBox' >
+            <Item className='headerOrderPlaced'>
+            <Header/>
+            </Item>
             <Item className='OrderPlacedGridItem1' xs={12} sm={6} md={4} lg={3}>
                 <img src={orderplacepic} alt="" />
             </Item>
@@ -36,8 +43,12 @@ function OrderPlaced({setToggleCart,setOrderSuccessfullToggle}) {
                 </table>
             </Item>
             <Item className='OrderPlacedGridItem4' xs={12} sm={6} md={4} lg={3}>
-                <button id='OrderPlacedBtn' onClick={()=>{setToggleCart(false);setOrderSuccessfullToggle(false)}}>CONTINUE SHOPPING</button>
+                <Link to="/dashboard">
+                <button id='OrderPlacedBtn'>CONTINUE SHOPPING</button>
+                </Link>
+               
             </Item>
+            <Footer/>
         </Grid>
     )
 }

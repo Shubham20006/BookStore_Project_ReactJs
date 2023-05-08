@@ -1,9 +1,11 @@
 .BookDetailsBox {
+    margin-bottom: 20px;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin: 30px 0px;
+    align-items: flex-start;
 }
 
 #rtstr {
@@ -13,12 +15,12 @@
 }
 
 .BookDetailsDivBox {
+    height: 50px;
     width: 72%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    position: relative;
-    top: 20px;
+   
 }
 
 #home1 {
@@ -32,8 +34,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-    top: 30px;
+    
 }
 
 .BookDetailsGridItemOne {
@@ -114,23 +115,30 @@
 }
 
 #BookDetailsGridItem4 {
-    height: 145px;
-    display: flex;
+    height: 130px;
     font-size: 16px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     color: #0A0102;
+    text-align: left;
+}
+
+.DetailContent {
+    font-size: 14px;
+    color: #373434;
 }
 
 #BookDetailsGridItem5 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: flex-start;
-    height: 145px;
+    height: 160px;
     font-size: 16px;
     color: #0A0102;
-
+    text-align: left;
 }
 
 
@@ -228,48 +236,81 @@
     text-decoration: line-through;
 }
 
-@media(min-width:410px) and (max-width:810px) {
-    .BookDetailsGridItemOne {
-        width: 50%;
-    }
-
-    .BookDetailsGridItemTwo {
+@media(min-width:415px) and (max-width:810px) {
+    .BookDetailsGridItemOne,.BookDetailsGridItemTwo {
         width: 60%;
     }
+    .BookDetailsDivBox {
+        width: 69%;
+    }
+
     .BookDetailsGridBox {
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        position: relative;
-        top: 30px;
-    }
-    .BookdetailBooknameBox {
-        width: 100%;
        
+       
+    }
+
+    .BookdetailBooknameBox,.BookdetailAuthorNameBox {
+        width: 100%;
+
+    }
+    #BookDetailsGridItem4 {
+        height: 130px;
+    }
+    
+    .DetailContent {
+        font-size: 12px;
+    }
+    
+    #BookDetailsGridItem5 {
+        height: 170px;
     }
 }
 
-@media(max-width:410px) {
+@media(max-width:415px) {
     .BookDetailsGridItemOne {
         width: 90%;
     }
-
-    .BookDetailsGridItemTwo {
-        width: 100%;
-        margin-left: 10px;
+    .BookDetailsDivBox {
+        width: 90%;
     }
+    .BookDetailsGridItemTwo {
+        width: 100%;   
+        margin: 20px 10px;
+    }
+
     .BookDetailsGridBox {
         width: 73%;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        position: relative;
-        top: 30px;
+       
     }
-    .BookdetailBooknameBox,.BookdetailPriceBox {
-        width: 50%; 
+
+    .BookdetailBooknameBox,.BookdetailAuthorNameBox {
+        width: 100%;
+    }
+    .BookdetailPriceBox {
+        width: 50%;
+    }
+    #BookDetailsGridItem4 {
+        height: 130px;
+    }
+    
+    .DetailContent {
+        font-size: 12px;
+    }
+    
+    #BookDetailsGridItem5 {
+        height: 160px;
+    }
+    #BookDetailsGridItem1 {     
+        width: 338px;
+        height: 400px;
     }
 }
